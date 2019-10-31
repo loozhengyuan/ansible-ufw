@@ -1,5 +1,5 @@
 ---
 - name: Restart ufw on config change
   ufw:
-    state: restarted
-  listen: restart_ufw
+    state: reloaded
+  listen: ufw_reload

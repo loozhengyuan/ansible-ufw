@@ -9,7 +9,7 @@
   ufw:
     rule: allow
     name: OpenSSH
-  notify: restart_ufw
+  notify: ufw_reload
 
 - name: Enable UFW
   ufw:
