@@ -5,6 +5,12 @@
     state: latest
     force_apt_get: yes
 
+- name: Ensure OpenSSH is installed
+  apt:
+    name: ssh
+    state: latest
+    force_apt_get: yes
+
 - name: Allow OpenSSH
   ufw:
     rule: allow
