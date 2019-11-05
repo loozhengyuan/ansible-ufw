@@ -1,0 +1,5 @@
+---
+ufw_rules:
+  - rule: allow
+    port: "{{ ansible_port if ansible_port is defined else '22' }}"
+    proto: tcp
