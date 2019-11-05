@@ -5,18 +5,6 @@
     state: present
     force_apt_get: yes
 
-- name: Ensure OpenSSH is installed
-  apt:
-    name: ssh
-    state: present
-    force_apt_get: yes
-
-- name: Allow OpenSSH
-  ufw:
-    rule: allow
-    name: OpenSSH
-  notify: ufw_reload
-
 - name: Set ufw rules
   ufw:
     rule: "{{ item.rule }}"
