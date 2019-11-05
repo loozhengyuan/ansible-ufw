@@ -5,6 +5,12 @@
     state: present
     force_apt_get: yes
 
+- name: Ensure ssh is installed
+  apt:
+    name: ssh
+    state: present
+    force_apt_get: yes
+
 - name: Set ufw rules
   ufw:
     rule: "{{ item.rule }}"
