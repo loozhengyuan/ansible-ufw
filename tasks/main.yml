@@ -17,6 +17,14 @@
     name: OpenSSH
   notify: ufw_reload
 
+- name: Set ufw rules
+  ufw:
+    rule: "{{ item.rule }}"
+    port: "{{ item.port }}"
+    proto: "{{ item.proto }}"
+  loop: "{{ ufw_rules }}"
+  notify: ufw_reload
+
 - name: Enable UFW
   ufw:
     state: enabled
