@@ -1,14 +1,14 @@
 ---
-- name: Install UFW
+- name: Ensure ufw is installed
   apt:
     name: ufw
-    state: latest
+    state: present
     force_apt_get: yes
 
 - name: Ensure OpenSSH is installed
   apt:
     name: ssh
-    state: latest
+    state: present
     force_apt_get: yes
 
 - name: Allow OpenSSH
