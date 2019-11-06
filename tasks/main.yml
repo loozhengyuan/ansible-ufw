@@ -15,6 +15,11 @@
     force_apt_get: yes
   when: ansible_facts['distribution'] == "Debian"
 
+- name: Ensure ip6table_filter module is loaded
+  modprobe:
+    name: ip6table_filter
+    state: present
+
 - name: Set ufw rules
   ufw:
     rule: "{{ item.rule }}"
