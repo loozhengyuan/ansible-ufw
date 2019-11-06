@@ -13,7 +13,7 @@
     name: ssh
     state: present
     force_apt_get: yes
-  when: ansible_facts['os_family'] == "Debian"
+  when: ansible_facts['distribution'] == "Debian"
 
 - name: Set ufw rules
   ufw:
