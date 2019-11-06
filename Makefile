@@ -1,11 +1,6 @@
 install:
 	pip install --upgrade pip setuptools wheel
-init:
-	pip install 'molecule[docker]'
-	molecule init scenario
-check:
-	pip install 'molecule[docker]'
-	molecule check
+	pip install -r requirements.txt
 test:
-	pip install 'molecule[docker]'
+	pip install --upgrade molecule docker
 	molecule test
