@@ -15,6 +15,8 @@
     force_apt_get: yes
   when: ansible_facts['distribution'] == "Debian"
 
+# NOTE: Mounting kernel modules and ensuring kmod present
+# is required for this role to work in CI/CD tests
 - name: Ensure kmod is installed
   apt:
     name: kmod
