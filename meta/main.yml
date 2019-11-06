@@ -30,10 +30,12 @@ galaxy_info:
   platforms:
   - name: Debian
     versions:
-    - all
+    - buster
+    - stretch
   - name: Ubuntu
     versions:
-    - all
+    - bionic
+    - xenial
 
   galaxy_tags: []
     # List tags for your role here, one per line. A tag is a keyword that describes
