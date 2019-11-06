@@ -9,9 +9,18 @@ lint:
     config-data:
       ignore: venv/
 platforms:
-  - name: instance
-    image: debian:latest
-    privileged: True
+  - name: debian-buster
+    image: debian:buster
+    privileged: true
+  - name: debian-stretch
+    image: debian:stretch
+    privileged: true
+  - name: ubuntu-bionic
+    image: ubuntu:bionic
+    privileged: true
+  - name: ubuntu-xenial
+    image: ubuntu:xenial
+    privileged: true
 provisioner:
   name: ansible
   lint:
