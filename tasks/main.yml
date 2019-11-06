@@ -5,6 +5,9 @@
     state: present
     force_apt_get: yes
 
+# FIXME: This task is needed to fix an issue that causes the
+# `ufw status verbose` command to fail. It is not known why
+# ensuring ssh is installed will solve the error.
 - name: Ensure ssh is installed
   apt:
     name: ssh
