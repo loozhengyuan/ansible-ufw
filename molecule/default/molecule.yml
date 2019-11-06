@@ -12,16 +12,20 @@ platforms:
   - name: debian-buster
     image: debian:buster
     privileged: true
+    volumes:
+      - /lib/modules:/lib/modules:ro
   - name: debian-stretch
     image: debian:stretch
     privileged: true
     volumes:
       - /lib/modules:/lib/modules:ro
+    capabilities:
+      - NET_ADMIN
   - name: ubuntu-bionic
     image: ubuntu:bionic
     privileged: true
-    capabilities:
-      - NET_ADMIN
+    volumes:
+      - /lib/modules:/lib/modules:ro
   - name: ubuntu-xenial
     image: ubuntu:xenial
     privileged: true
